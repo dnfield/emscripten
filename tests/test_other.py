@@ -742,6 +742,7 @@ f.close()
 
   # Tests that the Emscripten CMake toolchain option
   # -DEMSCRIPTEN_GENERATE_BITCODE_STATIC_LIBRARIES=ON works.
+  @no_wasm_backend('this option is fastcomp only')
   def test_cmake_bitcode_static_libraries(self):
     if WINDOWS:
       emcmake = path_from_root('emcmake.bat')
